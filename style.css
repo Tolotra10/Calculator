@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(226, 169, 212) 0%, rgb(30, 235, 200) 100%);
+    font-family: sans-serif;
+}
+
+.calulatrice {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px black;
+}
+
+.ecran {
+    background: rgb(125, 193, 233);
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: .3em 0 .3em 0;
+    font-family: "fontawesome";
+}
+
+.touches {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 5px;
+}
+
+button {
+    border: none;
+    outline: none;
+    font-size: 2em;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 0 3px #a8a8a8;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0 1px #a8a8a8;
+    transform: translateY(2px);
+}
+
+button[data-key="8"] {
+    background-color: rgb(243, 159, 2);
+    font-weight: bold;
+}
+
+button[data-key="13"] {
+    background-color: rgb(2, 243, 54);
+    font-weight: bold;
+    grid-column: span 2;
+}
